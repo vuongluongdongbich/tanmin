@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html> 
+
+    <head> 
+        <meta name="Author" content="Luong"> 
+        <meta name="Description" content = "" >
+    </head>
+
+    
+    <link rel="stylesheet" href="style.css">;
+    <link rel="stylesheet" href="background1.css">;
+
+
+    <body> 
+        <canvas id = "heart"> trinh duyet khong ho tro canvas</canvas>
+        <div class="snowflakes" aria-hidden="true">
+  <div class="snowflake">❅</div>
+  <div class="snowflake">❆</div>
+  <div class="snowflake">❅</div>
+  <div class="snowflake">❆</div>
+  <div class="snowflake">❅</div>
+  <div class="snowflake">❆</div>
+  <div class="snowflake">❅</div>
+  <div class="snowflake">❆</div>
+  <div class="snowflake">❅</div>
+  <div class="snowflake">❆</div>
+</div>
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+    <a href="totinh.html" style="font-size: 80px; text-decoration: none;">🎁</a>
+</div>
+        
+
+        <div class="envelope" onclick="toggleEnvelope()">
+            <div class="back"></div>
+            <div class="letter">
+                <h3>💌 Thư của Min Min</h3>
+                <p>Mời Min Min nhấn zào đeyy</p>
+                <div style="text-align: center;">
+                     <a href="totinh.html">🎁</a>
+                </div>
+            </div>
+            <div class="infront"></div>
+            <div class="flap"></div>
+            <div class="heart">💖</div>
+        </div>
+
+        <script>
+            function toggleEnvelope() {
+                document.querySelector('.envelope').classList.toggle('open');
+        }
+        </script>
+    </body>
+
+</html>

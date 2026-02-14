@@ -1,0 +1,101 @@
+html, body {
+    height: 100%;
+
+    background: #000;
+}
+
+canvas {
+    position: absolute;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: #000;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f4f6fb;
+  font-family: Arial, sans-serif;
+}
+
+/* ===== Envelope container ===== */
+.envelope {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  cursor: pointer;
+}
+
+/* ===== Back ===== */
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #104e5c;
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.infront {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #161869;
+    border-radius: 8px;
+    z-index: 4;
+}
+
+.heart {
+    position: absolute;
+    top: 80px;
+    left: 43%;
+    font-size: 28px;
+    z-index: 6;
+}
+
+/* ===== Letter ===== */
+.letter {
+  position: absolute;
+  width: 90%;
+  height: 80%;
+  background: white;
+  left: 5%;
+  bottom: 10px;
+  transition: transform 0.8s ease;
+  border-radius: 6px;
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 3;
+}
+
+/* ===== Flap ===== */
+.flap {
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-top: 100px solid #c6cdf5;
+  transform-origin: top;
+  transition: transform 0.8s ease;
+  transform: rotateX(0deg) translateZ(1px);
+  z-index: 5;
+}
+
+/* ===== Open state ===== */
+.envelope.open .flap {
+  transform: rotateX(180deg);
+  transform: rotateX(180deg) translateZ(-1px);
+  z-index: 2;
+}
+
+.envelope.open .letter {
+  transform: translateY(-180px);
+  transition-delay: 1s;
+}
